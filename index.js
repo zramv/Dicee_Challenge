@@ -7,40 +7,10 @@ roll.addEventListener('click', onButtonClick);
 
 function randomPlay(player){
     var randomNum=Math.floor((Math.random()*6)+1);
-    switch(randomNum){
-        case 1:{
-            player.src="./images/dice1.png";
-            return 1;
-            break;
-            
-        }
-        case 2:{
-            player.src ='./images/dice2.png';
-            return 2;
-            break;
-        }
-        case 3:{
-            player.src ='./images/dice3.png';
-            return 3;
-            break;
-        }
-        case 4:{
-            player.src ='./images/dice4.png';
-            return 4;
-            break;
-        }
-        case 5:{
-            player.src ='./images/dice5.png';
-            return 5;
-            break;
-        }
-        case 6:{
-            player.src ='./images/dice6.png';
-            return 6;
-            break;
-        }
-    }
+    player.src="./images/"+"dice"+randomNum+".png";
+    return randomNum;
 }
+
 
 function onButtonClick() {
     var playerOneNum= randomPlay(playerOne);
